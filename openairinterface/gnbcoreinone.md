@@ -76,7 +76,11 @@ cd ~/openairinterface5g
 git checkout 2024.w18
 ```
 
-Apply the changes specified [here](https://github.com/samiemostafavi/autoran/blob/main/docs/oai-e320.md)
+Apply the changes specified [here](https://github.com/samiemostafavi/autoran/blob/main/docs/oai-e320.md) by downloading these files
+```
+curl -o ~/openairinterface5g/radio/USRP/usrp_lib.cpp https://raw.githubusercontent.com/KTH-EXPECA/examples/main/openairinterface/usrp_lib.cpp
+curl -o ~/openairinterface5g/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf https://raw.githubusercontent.com/KTH-EXPECA/examples/main/openairinterface/gnb.sa.band78.fr1.106PRB.usrpb210.conf
+```
 
 Then build the code
 ```
@@ -87,6 +91,11 @@ cd ~/openairinterface5g/cmake_targets
 # Build OAI gNB
 cd ~/openairinterface5g/cmake_targets
 ./build_oai -w USRP --ninja --gNB -C
+```
+
+Modify the USRP address (e.g. 10.30.10.6) in the line with `sdr_addrs=`
+```
+vim ~/openairinterface5g/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
 ```
 
 3) Run gnb
