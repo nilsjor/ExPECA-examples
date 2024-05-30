@@ -64,7 +64,7 @@ ldconfig
 uhd_images_downloader
 ```
 
-2) Build OAI gNB
+2) Build OAI gnb
 
 Get the code
 ```
@@ -87,5 +87,10 @@ cd ~/openairinterface5g/cmake_targets
 # Build OAI gNB
 cd ~/openairinterface5g/cmake_targets
 ./build_oai -w USRP --ninja --gNB -C
+```
+
+3) Run gnb
+```
+./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --sa --usrp-tx-thread-config 1 -E
 ```
 
