@@ -64,6 +64,24 @@ ldconfig
 uhd_images_downloader
 ```
 
+Check the USRP is accessible by running `uhd_find_devices`:
+```
+root@zun-9039e850-dedf-4fb4-98ad-ad1c1205d1f8-65659c4c99-dmvx5:~# uhd_find_devices
+[INFO] [UHD] linux; GNU C++ version 9.4.0; Boost_107100; UHD_4.3.0.HEAD-0-g1f8fd345
+--------------------------------------------------
+-- UHD Device 0
+--------------------------------------------------
+Device Address:
+    serial: 3238B90
+    addr: 10.30.10.6
+    claimed: False
+    fpga: XG
+    mgmt_addr: 10.30.10.6
+    name: ni-e320-3238B90
+    product: e320
+    type: e3xx
+```
+
 2) Build OAI gnb
 
 Get the code
