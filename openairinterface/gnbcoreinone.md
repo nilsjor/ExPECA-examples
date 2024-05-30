@@ -71,7 +71,9 @@ Get the code
 cd ~
 git clone https://gitlab.eurecom.fr/oai/openairinterface5g.git ~/openairinterface5g
 cd ~/openairinterface5g
-git checkout develop
+# git checkout develop
+# tested commit:
+git checkout 2024.w18
 ```
 
 Apply the changes specified [here](https://github.com/samiemostafavi/autoran/blob/main/docs/oai-e320.md)
