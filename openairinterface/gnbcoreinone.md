@@ -1,5 +1,7 @@
 # Gnb-and-Core-in-One Setup
 
+Run these instructions if you start from `samiemostafavi/sshd-dind` container at ExPECA testbed, and have it connected to an SDR already with the address `10.30.10.6` and a 10Gbps SFP connection.
+
 ## Core Network
 
 The following instructions are taken from [NR_SA_Tutorial_OAI_CN5G](https://gitlab.eurecom.fr/oai/openairinterface5g/-/blob/develop/doc/NR_SA_Tutorial_OAI_CN5G.md). Check if there is any updates.
