@@ -142,7 +142,7 @@ cd ~/openairinterface5g
 git checkout 2024.w18
 ```
 
-Apply the changes specified [here](https://github.com/samiemostafavi/autoran/blob/main/docs/oai-e320.md) by downloading these files
+Apply the changes specified [here](https://github.com/samiemostafavi/autoran/blob/main/docs/oai-e320.md) by running the following commands
 ```
 curl -o ~/openairinterface5g/radio/USRP/usrp_lib.cpp https://raw.githubusercontent.com/KTH-EXPECA/examples/main/openairinterface/usrp_lib.cpp
 curl -o ~/openairinterface5g/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf https://raw.githubusercontent.com/KTH-EXPECA/examples/main/openairinterface/gnb.sa.band78.fr1.106PRB.usrpb210.conf
