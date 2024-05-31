@@ -93,7 +93,7 @@ docker compose up -d
 ## GNodeB
 
 Following instructions are the instructions in sections 3.1 and 3.2 and 4.1 and 4.2 in [NR_SA_Tutorial_COTS_UE](https://gitlab.eurecom.fr/oai/openairinterface5g/-/blob/develop/doc/NR_SA_Tutorial_COTS_UE.md)
-In section 3.1, use git checkout v4.3.0.0 instead of git checkout v4.6.0.0.
+In section 3.1, we use git checkout v4.3.0.0 instead of git checkout v4.6.0.0.
 
 1) Install UHD 4.3.0.0
 ```
