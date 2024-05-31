@@ -55,6 +55,7 @@ INSERT INTO `AuthenticationSubscription` (`ueid`, `authenticationMethod`, `encPe
 INSERT INTO `AuthenticationSubscription` (`ueid`, `authenticationMethod`, `encPermanentKey`, `protectionParameterId`, `sequenceNumber`, `authenticationManagementField`, `algorithmId`, `encOpcKey`, `encTopcKey`, `vectorGenerationInHss`, `n5gcAuthMethod`, `rgAuthenticationInd`, `supi`) VALUES
     ('001010000000007', '5G_AKA', 'fec86ba6eb707ed08905757b1bb44b8f', 'fec86ba6eb707ed08905757b1bb44b8f', '{\"sqn\": \"000000000000\", \"sqnScheme\": \"NON_TIME_BASED\", \"lastIndexes\": {\"ausf\": 0}}', '8000', 'milenage', 'C42449363BBAD02B66D16BC975D77CC1', NULL, NULL, NULL, NULL, '001010000000007');
 ```
+NOTE: in each entry IMSI value is written twice, make sure to modify both of them. Usually the rest can remain unchanged.
 
 in the second one (`conf/users.conf`) these will be added
 ```
@@ -80,7 +81,7 @@ host = dynamic
 transport=udp
 ```
 
-You can add more users. Make sure the UE devices' imsi are included.
+You can add more users. Make sure the IMSIs in these two files match the IMSIs of the simcards in Advantech routers.
 
 
 4) Run core network
