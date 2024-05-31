@@ -31,14 +31,20 @@ cd ~/oai-cn5g
 docker compose pull
 ```
 
-3) Add more users by edditing the following files
+3) Add more users by edditing the following files according to the instructions below
 ```
 cd ~/oai-cn5g
 vim database/oai_db.sql
 vim conf/users.conf
 ```
 
-in the first one (`database/oai_db.sql`), just replicate the lines for example the result would be addition of the following
+in the first one (`database/oai_db.sql`), you need to replicate the `INSERT INTO` lines after this block:
+```
+--
+-- Dumping data for table `AuthenticationSubscription`
+--
+```
+For example the result would be addition of the following (for 3 more users with IMSIs `001010000000005`, `001010000000006`, and `001010000000007`)
 ```
 INSERT INTO `AuthenticationSubscription` (`ueid`, `authenticationMethod`, `encPermanentKey`, `protectionParameterId`, `sequenceNumber`, `authenticationManagementField`, `algorithmId`, `encOpcKey`, `encTopcKey`, `vectorGenerationInHss`, `n5gcAuthMethod`, `rgAuthenticationInd`, `supi`) VALUES
     ('001010000000005', '5G_AKA', 'fec86ba6eb707ed08905757b1bb44b8f', 'fec86ba6eb707ed08905757b1bb44b8f', '{\"sqn\": \"000000000000\", \"sqnScheme\": \"NON_TIME_BASED\", \"lastIndexes\": {\"ausf\": 0}}', '8000', 'milenage', 'C42449363BBAD02B66D16BC975D77CC1', NULL, NULL, NULL, NULL, '001010000000005');
