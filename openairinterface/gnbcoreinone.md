@@ -132,7 +132,7 @@ Device Address:
 
 2) Build OAI gnb
 
-Get the code
+Get the code (we use 2024.w18 commit instead of the latest)
 ```
 cd ~
 git clone https://gitlab.eurecom.fr/oai/openairinterface5g.git ~/openairinterface5g
