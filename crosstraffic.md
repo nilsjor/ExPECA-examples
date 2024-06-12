@@ -184,7 +184,7 @@ nodes_names = [
 ]
 
 for container_name,port in zip(nodes_names,ports):
-    command = "iperf3 -c 10.70.70.210 -p {port} -b 5M -t 30"
+    command = f"iperf3 -c 10.70.70.210 -p {port} -b 5M -t 30"
     result = chi.container.execute(
         container_ref=container_name,
         command="curl -s -X POST -H \"Content-Type: application/json\" -d '{\"cmd\": \"" + command + "\"}' http://localhost:50505/",
