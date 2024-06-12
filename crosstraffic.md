@@ -59,7 +59,7 @@ Create 5 client nodes:
 Node-01:
 ```
 advnet = chi.network.get_network("adv-02-net")
-container_name = "bryan-ct-client-node-01"
+container_name = "ct-client-node-01"
 chi.container.create_container(
     name = container_name,
     image = "samiemostafavi/perf-meas",
@@ -80,7 +80,7 @@ logger.success(f"created {container_name} container.")
 Node-02:
 ```
 advnet = chi.network.get_network("adv-03-netw")
-container_name = "bryan-ct-client-node-02"
+container_name = "ct-client-node-02"
 chi.container.create_container(
     name = container_name,
     image = "samiemostafavi/perf-meas",
@@ -102,7 +102,7 @@ logger.success(f"created {container_name} container.")
 Node-03:
 ```
 advnet = chi.network.get_network("adv-04-netw")
-container_name = "bryan-ct-client-node-03"
+container_name = "ct-client-node-03"
 chi.container.create_container(
     name = container_name,
     image = "samiemostafavi/perf-meas",
@@ -124,7 +124,7 @@ logger.success(f"created {container_name} container.")
 Node-04:
 ```
 advnet = chi.network.get_network("adv-05-net")
-container_name = "bryan-ct-client-node-04"
+container_name = "ct-client-node-04"
 chi.container.create_container(
     name = container_name,
     image = "samiemostafavi/perf-meas",
@@ -146,7 +146,7 @@ logger.success(f"created {container_name} container.")
 Node-05:
 ```
 advnet = chi.network.get_network("adv-06-netw")
-container_name = "bryan-ct-client-node-05"
+container_name = "ct-client-node-05"
 chi.container.create_container(
     name = container_name,
     image = "samiemostafavi/perf-meas",
@@ -176,11 +176,11 @@ ports = [
     53305
 ]
 nodes_names = [
-    "bryan-ct-client-node-01",
-    "bryan-ct-client-node-02",
-    "bryan-ct-client-node-03",
-    "bryan-ct-client-node-04",
-    "bryan-ct-client-node-05"
+    "ct-client-node-01",
+    "ct-client-node-02",
+    "ct-client-node-03",
+    "ct-client-node-04",
+    "ct-client-node-05"
 ]
 
 for container_name,port in zip(nodes_names,ports):
