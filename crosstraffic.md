@@ -27,6 +27,25 @@ chi.container.wait_for_active(container_name)
 logger.success(f"created {container_name} container.")
 ```
 
+Run 5 iperf instances to manage 5 client nodes
+```
+ports = [
+    53301,
+    53302,
+    53303,
+    53304,
+    53305
+]
+container_name = "bryan-ct-server-node"
+for port in ports:
+    command = f"iperf3 -s -p {port}"
+    result = chi.container.execute(
+        container_ref=container_name,
+        command="curl -s -X POST -H \"Content-Type: application/json\" -d '{\"cmd\": \"" + command + "\"}' http://localhost:50505/",
+    )
+    logger.info(f"{result}")
+```
+
 Create 5 client nodes:
 
 1. worker-06 port eno12399np0 and adv-02
@@ -147,6 +166,13 @@ logger.success(f"created {container_name} container.")
 You can test them by running `iperf3 -c 10.70.70.210 -u -b 1G` in their console.
 
 ```
+ports = [
+    53301,
+    53302,
+    53303,
+    53304,
+    53305
+]
 nodes_names = [
     "bryan-ct-client-node-01",
     "bryan-ct-client-node-02",
@@ -154,9 +180,9 @@ nodes_names = [
     "bryan-ct-client-node-04",
     "bryan-ct-client-node-05"
 ]
-command = "iperf3 -c 10.70.70.210 -b 1G -t 30"
 
-for container_name in nodes_names:
+for container_name,port in zip(nodes_names,ports):
+    command = "iperf3 -c 10.70.70.210 -p {port} -b 5M -t 30"
     result = chi.container.execute(
         container_ref=container_name,
         command="curl -s -X POST -H \"Content-Type: application/json\" -d '{\"cmd\": \"" + command + "\"}' http://localhost:50505/",
