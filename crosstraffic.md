@@ -145,3 +145,21 @@ logger.success(f"created {container_name} container.")
 ```
 
 You can test them by running `iperf3 -c 10.70.70.210 -u -b 1G` in their console.
+
+```
+nodes_names = [
+    "bryan-ct-client-node-01",
+    "bryan-ct-client-node-02",
+    "bryan-ct-client-node-03",
+    "bryan-ct-client-node-04",
+    "bryan-ct-client-node-05"
+]
+command = "iperf3 -c 10.70.70.210 -b 1G -t 30"
+
+for container_name in nodes_names:
+    result = chi.container.execute(
+        container_ref=container_name,
+        command="curl -s -X POST -H \"Content-Type: application/json\" -d '{\"cmd\": \"" + command + "\"}' http://localhost:50505/",
+    )
+    logger.info(f"{result}")
+```
