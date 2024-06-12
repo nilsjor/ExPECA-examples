@@ -165,7 +165,7 @@ chi.container.wait_for_active(container_name)
 logger.success(f"created {container_name} container.")
 ```
 
-You can test them by running `iperf3 -c 10.70.70.210 -u -b 1G` in their console.
+You can test them by running `iperf3 -c 10.70.70.210 -b 5M -t 5` in their console.
 
 ```
 ports = [
