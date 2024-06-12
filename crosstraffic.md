@@ -1,24 +1,26 @@
 # Cross Traffic Setup
 
+This setup can saturate uplink capacity of ep5g.
+
 Reserve
-1. worker-06 and worker-07
+1. worker-07 and worker-08
 2. advantech routers 02,03,04,05,and 06
 
-Create the server node on worker-06 with port ens1f1.
+Create the server node on worker-07 with port ens1.
 ```
 edgenet = chi.network.get_network("edge-net")
-container_name = "bryan-ct-server-node"
+container_name = "ct-server-node"
 chi.container.create_container(
     name = container_name,
     image = "samiemostafavi/perf-meas",
-    reservation_id = worker06_reservation_id,
+    reservation_id = worker07_reservation_id,
     environment = {"SERVER_DIR":"/tmp/"},
     mounts = [],
     nets = [
         { "network" : edgenet['id'] },
     ],
     labels = {
-        "networks.1.interface":"ens1f1",
+        "networks.1.interface":"ens1",
         "networks.1.ip":"10.70.70.210/24",
         "networks.1.routes":"172.16.0.0/16-10.70.70.1",
     },
@@ -36,7 +38,7 @@ ports = [
     53304,
     53305
 ]
-container_name = "bryan-ct-server-node"
+container_name = "ct-server-node"
 for port in ports:
     command = f"iperf3 -s -p {port}"
     result = chi.container.execute(
@@ -48,11 +50,11 @@ for port in ports:
 
 Create 5 client nodes:
 
-1. worker-06 port eno12399np0 and adv-02
-2. worker-06 port eno12409np1 and adv-03
-3. worker-07 port ens1 and adv-04
-4. worker-07 port eno12409 and adv-05
-5. worker-07 port eno12419 and adv-06
+1. worker-07 port eno12409 and adv-02
+2. worker-07 port eno12419 and adv-03
+3. worker-07 port eno12429 and adv-04
+4. worker-08 port ens1 and adv-05
+5. worker-08 port eno12409 and adv-06
 
 Node-01:
 ```
@@ -61,13 +63,13 @@ container_name = "bryan-ct-client-node-01"
 chi.container.create_container(
     name = container_name,
     image = "samiemostafavi/perf-meas",
-    reservation_id = worker06_reservation_id,
+    reservation_id = worker07_reservation_id,
     environment = {"SERVER_DIR":"/tmp/"},
     nets = [
         { "network" : advnet['id'] },
     ],
     labels = {
-        "networks.1.interface":"eno12399np0",
+        "networks.1.interface":"eno12409",
         "networks.1.ip":"10.42.3.2/24",
         "networks.1.routes":"10.70.70.0/24-10.42.3.1",
     },
@@ -82,13 +84,13 @@ container_name = "bryan-ct-client-node-02"
 chi.container.create_container(
     name = container_name,
     image = "samiemostafavi/perf-meas",
-    reservation_id = worker06_reservation_id,
+    reservation_id = worker07_reservation_id,
     environment = {"SERVER_DIR":"/tmp/"},
     nets = [
         { "network" : advnet['id'] },
     ],
     labels = {
-        "networks.1.interface":"eno12409np1",
+        "networks.1.interface":"eno12419",
         "networks.1.ip":"10.42.3.2/24",
         "networks.1.routes":"10.70.70.0/24-10.42.3.1",
     },
@@ -110,7 +112,7 @@ chi.container.create_container(
         { "network" : advnet['id'] },
     ],
     labels = {
-        "networks.1.interface":"ens1",
+        "networks.1.interface":"eno12429",
         "networks.1.ip":"10.42.3.2/24",
         "networks.1.routes":"10.70.70.0/24-10.42.3.1",
     },
@@ -126,13 +128,13 @@ container_name = "bryan-ct-client-node-04"
 chi.container.create_container(
     name = container_name,
     image = "samiemostafavi/perf-meas",
-    reservation_id = worker07_reservation_id,
+    reservation_id = worker08_reservation_id,
     environment = {"SERVER_DIR":"/tmp/"},
     nets = [
         { "network" : advnet['id'] },
     ],
     labels = {
-        "networks.1.interface":"eno12409",
+        "networks.1.interface":"ens1",
         "networks.1.ip":"10.42.3.2/24",
         "networks.1.routes":"10.70.70.0/24-10.42.3.1",
     },
@@ -148,13 +150,13 @@ container_name = "bryan-ct-client-node-05"
 chi.container.create_container(
     name = container_name,
     image = "samiemostafavi/perf-meas",
-    reservation_id = worker07_reservation_id,
+    reservation_id = worker08_reservation_id,
     environment = {"SERVER_DIR":"/tmp/"},
     nets = [
         { "network" : advnet['id'] },
     ],
     labels = {
-        "networks.1.interface":"eno12419",
+        "networks.1.interface":"eno12409",
         "networks.1.ip":"10.42.3.2/24",
         "networks.1.routes":"10.70.70.0/24-10.42.3.1",
     },
