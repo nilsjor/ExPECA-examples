@@ -2,6 +2,8 @@
 
 This setup can saturate uplink capacity of ep5g.
 
+NOTE: advantech routers do not route traffic to/from a 10Gbps interface.
+
 Reserve
 1. worker-07 and worker-08
 2. advantech routers 02,03,04,05,and 06
