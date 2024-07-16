@@ -37,6 +37,11 @@ cd ~/oai-cn5g
 vim database/oai_db.sql
 vim conf/users.conf
 ```
+or download them (includes 20 UEs):
+```
+curl -o ~/oai-cn5g/conf/users.conf https://raw.githubusercontent.com/KTH-EXPECA/examples/main/openairinterface/users.conf
+curl -o ~/oai-cn5g/database/oai_db.sql https://raw.githubusercontent.com/KTH-EXPECA/examples/main/openairinterface/oai_db.sql
+```
 
 in the first one (`database/oai_db.sql`), you need to replicate the `INSERT INTO` lines after this block:
 ```
