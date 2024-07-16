@@ -8,7 +8,7 @@ The following instructions are taken from [NR_SA_Tutorial_OAI_CN5G](https://gitl
 
 1) Start updating and installing requirements
 ```
-apt-get update \
+apt-get update -y \
     && apt-get upgrade -y \
     && apt-get install -y \
     --no-install-recommends \
