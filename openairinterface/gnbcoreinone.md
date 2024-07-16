@@ -62,6 +62,7 @@ INSERT INTO `AuthenticationSubscription` (`ueid`, `authenticationMethod`, `encPe
 ```
 NOTE: in each entry IMSI value is written twice, make sure to modify both of them. Usually the rest can remain unchanged.
 
+---
 ### Only if you want to have static IPs: 
 In the same database file, replicate the entries under SMF table:
 ```
@@ -78,6 +79,13 @@ INSERT INTO `SessionManagementSubscriptionData` (`ueid`, `servingPlmnid`, `singl
 ```
 NOTE: the dnn `oai` does not work for static ip address. So add static ips for `openairinterface` dnn and remember that their subnet can be different, refer to the `conf/config.yaml` file. In this example it is "10.0.1.0/24".
 
+Moreover, in the config file, you must change one parameter. It can be done via:
+```
+cd ~/oai-cn5g
+sed -i 's/use_local_subscription_info: yes/use_local_subscription_info: no/g' conf/config.yaml
+```
+
+---
 
 In the second file (`conf/users.conf`) these will be added
 ```
