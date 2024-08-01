@@ -1,17 +1,21 @@
 # How to Communicate with Advantech Routers
 
-To configure and see the status of the Advantech routers remotely via command line interface, depending on the functionality you want choose one of the 2 ways:
+To configure and see the status of the Advantech routers remotely via command line interface, first make sure you have network connectivity to the router.
+In these instructions we assume the router's IP is `10.42.3.1`.
+Then, depending on the functionality you want, choose one of the 2 ways:
 
 ## 1) Communicate via the script
 
-Download the script on the container which is connected via network to the router. In this instructions we assume the router's IP is `10.42.3.1`.
+Download the script on the container which is connected via network to the router. 
 ```
 apt-get install jq
 curl -LJO -k https://github.com/samiemostafavi/advmobileinfo/raw/main/config_adv.sh
 chmod +x config_adv.sh
 ```
 
-Open the file to modify the parameters. For instance, set `default_sim` to select the default simcard. Set `default_sim=1` for ep5g and `default_sim=2` for expeca simcards.
+Open the file to modify the parameters.
+If you see another IP other than `10.42.3.1`, you can modify that in the script.
+For instance, set `default_sim` to select the default simcard. Set `default_sim=1` for ep5g and `default_sim=2` for expeca simcards.
 ```
 vim config_adv.sh
 ./config_adv.sh
