@@ -11,7 +11,7 @@ curl -LJO -k https://github.com/samiemostafavi/advmobileinfo/raw/main/config_adv
 chmod +x config_adv.sh
 ```
 
-Open the file to modify the parameters, including the password of the router.
+Open the file to modify the parameters. For instance, set `default_sim` to select the default simcard. Set `default_sim=1` for ep5g and `default_sim=2` for expeca simcards.
 ```
 vim config_adv.sh
 ./config_adv.sh
