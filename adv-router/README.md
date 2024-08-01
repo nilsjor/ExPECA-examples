@@ -1,8 +1,8 @@
-# Advantech Routers Remote Configuration
+# How to Communicate with Advantech Routers
 
-To configure the Advantech routers remotely via command line interface, there are 2 ways:
+To configure and see the status of the Advantech routers remotely via command line interface, depending on the functionality you want choose one of the 2 ways:
 
-## 1) Configure via the script
+## 1) Communicate via the script
 
 Download the script on the container which is connected via network to the router. In this instructions we assume the router's IP is `10.42.3.1`.
 ```
@@ -17,7 +17,7 @@ vim config_adv.sh
 ./config_adv.sh
 ```
 
-## 2) Configure via HTTP request
+## 2) Communicate via HTTP request
 
 Get connection information
 ```
