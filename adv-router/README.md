@@ -1,4 +1,4 @@
-# Advantech Routers Configuration
+# Advantech Routers Remote Configuration
 
 To configure the Advantech routers remotely via command line interface, there are 2 ways:
 
