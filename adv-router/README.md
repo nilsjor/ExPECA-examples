@@ -76,3 +76,6 @@ curl "http://10.42.3.1:50500/?selectband=nr5g_band&bands=1:2:3:5:7:8:12:14:20:25
 
 OK
 ```
+
+
+These rely on `ami` application running on the adv-router. More info here: https://github.com/samiemostafavi/advmobileinfo
