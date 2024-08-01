@@ -197,6 +197,7 @@ vim ~/openairinterface5g/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.
 
 3) Run gnb
 ```
+cd ~/openairinterface5g/cmake_targets/ran_build/build
 ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --sa --usrp-tx-thread-config 1 -E
 ```
 
