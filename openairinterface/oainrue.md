@@ -56,3 +56,20 @@ cd ~/openairinterface5g/cmake_targets
 cd ~/openairinterface5g/cmake_targets/ran_build/build/
 ./nr-uesoftmodem --band 79 -C 4643040000 -r 106 --numerology 1 --ssb 516 --sa -E --uicc0.imsi 001010000000001 --uicc0.dnn oai --uicc0.nssai_sst 1 --uicc0.nssai_sd 16777215  --uicc0.opc c42449363bbad02b66d16bc975d77cc1  --uicc0.key fec86ba6eb707ed08905757b1bb44b8f --usrp-args "mgmt_addr=10.30.10.4,addr=10.30.10.4" --ue-fo-compensation --ue-rxgain 115 --ue-txgain 0 --ue-max-power 0
 ```
+
+## Add Routes
+
+Add core network subnet route via the gateway which is `10.0.1.1` in case of static address:
+```
+ip route add 192.168.70.128/26 via 10.0.1.1
+```
+
+Ping ext-dn
+```
+ping 192.168.70.135
+```
+
+Ping UPF
+```
+ping 192.168.70.134
+```
