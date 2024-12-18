@@ -44,6 +44,20 @@ cd ~/openairinterface5g/cmake_targets/ran_build/build
 ```
 
 
+# Data transfer test with iperf3
+
+To test the SDR data transfer, you can use iperf3 command. 
+From the GNodeB:
+```
+iperf3 -s
+```
+
+From the Advantech router end node container:
+```
+iperf3 -c 192.168.70.129 -u -b 100M --get-server-output
+```
+
+
 # How to Debug 5G Core
 
 In order to debug the sctp messages between the core and gnb, while running the core, use tcpdump:
