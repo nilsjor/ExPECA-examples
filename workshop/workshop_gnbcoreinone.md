@@ -31,7 +31,6 @@ uhd_find_devices
 # Note the printed address
 
 vim ~/openairinterface5g/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
-# Replace 10.30.10.6 with your printed address
 ```
 
 2) Run gnb
