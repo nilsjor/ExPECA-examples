@@ -25,17 +25,13 @@ In section 3.1, we use git checkout v4.3.0.0 instead of git checkout v4.6.0.0.
 
 1) Modify gnb configuration file
 
-Modify the USRP address (e.g. 10.30.10.6) in the line with `sdr_addrs=`. Replace the "band78" part to match your chosen frequency band.
+Modify the USRP address (e.g. 10.30.10.6) in the line with `sdr_addrs=`. Replace the "band78" part in the file name to match your chosen frequency band.
 ```
 uhd_find_devices
 # Note the printed address
 
 vim ~/openairinterface5g/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
 # Replace 10.30.10.6 with your printed address
-
-# or, if you want to change the file with "sed" command (replace "x" to match your address from the uhd_find_devices printout)
-
-sed -i 's/addr=10.30.10.6/addr=10.30.10.x/g' ~/openairinterface5g/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
 ```
 
 2) Run gnb
