@@ -45,6 +45,7 @@ cd ~/openairinterface5g/cmake_targets/ran_build/build
 To test the SDR data transfer, you can use iperf3 command. 
 From the GNodeB:
 ```
+ulimit -n 65535
 iperf3 -s
 ```
 
