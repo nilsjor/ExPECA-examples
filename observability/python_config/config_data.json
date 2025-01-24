@@ -1,0 +1,13 @@
+{
+	"address"                 : "130.237.11.116",
+    "influxdb_psw"            : "defaultdefault",
+    "influxdb_org"            : "default",
+    "influxdb_bucket"         : "default",
+    "influxdb_retention_days" : 14,
+    "influxdb_token"          : "default",
+    "grafana_psw"             : "defaultdefault",
+    "grafana_datasource"      : "influxdb"
+}
+
+
+
