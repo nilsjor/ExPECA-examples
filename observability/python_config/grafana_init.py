@@ -15,9 +15,7 @@ except:
     print("Cannot read config data file")  
     sys.exit(1)  
 
-# ------------------------------------------------------------------------------
-# CONFIGURATION
-# ------------------------------------------------------------------------------
+
 GRAFANA_URL = "http://" + config["address"] + ":3000"
 
 # Current admin credentials
@@ -58,9 +56,7 @@ def change_own_admin_password():
         print("Response:", resp.text)
         sys.exit(1)
 
-# ------------------------------------------------------------------------------
-# MAIN
-# ------------------------------------------------------------------------------
+
 if __name__ == "__main__":
     # Attempt to change the admin's own password
     change_own_admin_password()

@@ -21,7 +21,6 @@ def run_script(script_name):
     Raises an error if the script fails (non-zero exit).
     """
     script_path = script_name
-    # script_path = os.path.join(os.path.dirname(__file__), script_name)
     print(f"\n=== Running {script_path} ===")
     try:
         # Call with the same Python interpreter running this file

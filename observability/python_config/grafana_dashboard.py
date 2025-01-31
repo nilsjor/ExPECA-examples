@@ -33,9 +33,7 @@ FOLDER_ID = 0
 # with the same UID/title.
 OVERWRITE_EXISTING = False
 
-# ------------------------------------------------------------------------------
-# MAIN LOGIC
-# ------------------------------------------------------------------------------
+
 def import_dashboards():
     """
     Looks for all JSON files matching 'dashboard*.json' in the current directory

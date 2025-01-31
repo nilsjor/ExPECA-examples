@@ -16,9 +16,7 @@ except:
     print("Cannot read config data file")  
     sys.exit(1)  
 
-# ------------------------------------------------------------------------------
-# CONFIGURATION - Update these for your environment
-# ------------------------------------------------------------------------------
+
 GRAFANA_URL = "http://" + config["address"] + ":3000"
 GRAFANA_USER = "admin"
 GRAFANA_PASS = config["grafana_psw"]

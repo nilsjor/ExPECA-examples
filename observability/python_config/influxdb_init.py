@@ -30,9 +30,7 @@ RETENTION_DAYS = config["influxdb_retention_days"]              # Retention in d
 # Choose a specific token instead of letting InfluxDB generate one
 CUSTOM_TOKEN = config["influxdb_token"]
 
-# -------------------------------
-# Main setup function
-# -------------------------------
+
 def setup_influxdb_noauth():
     """
     Perform initial setup via the /api/v2/setup endpoint, and specify a custom token.
@@ -41,7 +39,7 @@ def setup_influxdb_noauth():
 
     setup_url = f"http://{INFLUXDB_HOST}:{INFLUXDB_PORT}/api/v2/setup"
 
-    # Convert weeks to seconds (e.g., 2 weeks -> 2 * 7 * 24 * 60 * 60)
+    # Convert days to seconds 
     retention_seconds = RETENTION_DAYS * 24 * 60 * 60
 
     # Prepare JSON data for the setup endpoint, including a custom token
@@ -77,9 +75,7 @@ def setup_influxdb_noauth():
         print(f"Error connecting to InfluxDB at {setup_url}: {str(e)}")
         sys.exit(1)
 
-# -------------------------------
-# Entry point
-# -------------------------------
+
 if __name__ == "__main__":
     # pip install requests if needed
     setup_influxdb_noauth()
