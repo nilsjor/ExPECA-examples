@@ -1,5 +1,5 @@
 {
-	"address"                 : "x.x.x.x",
+    "address"                 : "x.x.x.x",
     "grafana_psw"             : "defaultdefault",
     "influxdb_psw"            : "defaultdefault",
     "influxdb_org"            : "default",
