@@ -8,8 +8,9 @@ import os
 scripts_to_run = [
     "influxdb_init.py",
     "grafana_init.py",
-    "grafana_datasource_health.py",
-    "grafana_dashboard.py"
+    "grafana_influxdb_datasource.py",
+    "grafana_mqtt_datasource.py",
+    "grafana_restore.py"
 ]
 
 os.chdir(sys.path[0])            # Set current directory to script directory

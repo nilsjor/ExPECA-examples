@@ -26,7 +26,7 @@ INFLUXDB_ORG = config["influxdb_org"]
 INFLUXDB_BUCKET = config["influxdb_bucket"]
 INFLUXDB_TOKEN = config["influxdb_token"]              # All-access or read/write token
 
-DATASOURCE_NAME = config["grafana_datasource"]
+DATASOURCE_NAME = config["influxdb_datasource"]
 
 # ------------------------------------------------------------------------------
 # STEP 1: CREATE OR UPDATE THE DATASOURCE
@@ -49,8 +49,10 @@ def create_influxdb_datasource():
         },
         "secureJsonData": {
             "token": INFLUXDB_TOKEN
-        }
+        },
+        "isDefault": False  # Ensure this datasource is not set as default
     }
+
 
     headers = {
         "Content-Type": "application/json"
