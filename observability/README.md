@@ -134,6 +134,16 @@ A JSON configuration file (`config_data.json`) is used to store necessary creden
 
 ---
 
+## Typical Setup Procedure
+
+The typical procedure for a quick, secure, and repeatable setup of the visualization system is as follows:
+
+1. Run "visual_public.ipynb" or "visual_public.ipynb" with the desired parameters
+2. Run "visual_config.py" script, which in turn runs a configured sequence of setup scripts
+
+Voila! Your visualization system is now up and running, all within a few minutes. You now have your own secure credentials and your favorite
+Grafana dashboards ready to show off your latest experimentation.
+
 ## Conclusion
 
 This project provides a **fully automated, Docker-based monitoring solution** for ExPECA. By leveraging **Python scripts and Jupyter notebooks**, users can quickly deploy, configure, and manage the visualization environment.
