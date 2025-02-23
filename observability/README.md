@@ -109,7 +109,8 @@ With these scripts, a **new visualization container can be fully set up within s
 
 ## Configuration File
 
-A JSON configuration file (`config_data.json`) is used to store necessary credentials and parameters:
+A JSON configuration file (`config_data.json`) is used by the Python scripts, and contains necessary credentials and parameters. Store this
+file in the same directory as the Python scripts.
 
 ```json
 {
