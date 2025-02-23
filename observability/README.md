@@ -121,13 +121,14 @@ A JSON configuration file (`config_data.json`) is used to store necessary creden
     "influxdb_retention_days": 14,
     "influxdb_token": "default",
     "influxdb_datasource": "influxdb",
+    "mqtt_user": "admin"
     "mqtt_psw": "defaultdefault"
     "mqtt_datasource": "mqtt"
 }
 ```
 
 - The `address` field should be set to the **public IP** of the container.
-- The `mqtt_psw` field needs to be the same as what was set for the `MQTT_PASS` environmental variable set earlier when starting the container
+- The `mqtt_user/mqtt_psw` fields need to be the same as what was used for the `MQTT_USER/MQTT_PASS` container environmental variables earlier
 - Ensure the **InfluxDB password** is at least **8 characters long**.
 - Modify other parameters to suit your setup.
 
