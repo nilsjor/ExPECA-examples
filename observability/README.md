@@ -127,7 +127,7 @@ A JSON configuration file (`config_data.json`) is used to store necessary creden
 ```
 
 - The `address` field should be set to the **public IP** of the container.
-- The `mqtt_psw` field needs to be the same as what was set for the `MQTT_PASS` environmental set earlier when starting the container
+- The `mqtt_psw` field needs to be the same as what was set for the `MQTT_PASS` environmental variable set earlier when starting the container
 - Ensure the **InfluxDB password** is at least **8 characters long**.
 - Modify other parameters to suit your setup.
 
