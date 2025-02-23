@@ -57,7 +57,7 @@ To automate this process, **Python scripts are available** (see the Python Scrip
 
 ## Python Notebooks
 
-To simplify setup and deployment on the **ExPECA testbed**, we provide two Jupyter notebooks:
+To simplify setup and deployment on the **ExPECA testbed**, we provide two Python notebooks:
 
 - `visual_public.ipynb` – Uses only a public IP connection.
 - `visual_public_edge.ipynb` – Supports both public IP and an internal "edge-net" connection for intra-testbed communication.
@@ -146,7 +146,7 @@ Grafana dashboards ready to show off your latest experimentation.
 
 ## Conclusion
 
-This project provides a **fully automated, Docker-based monitoring solution** for ExPECA. By leveraging **Python scripts and Jupyter notebooks**, users can quickly deploy, configure, and manage the visualization environment.
+This project provides a **fully automated, Docker-based monitoring solution** for ExPECA. By leveraging **Python scripts and Python notebooks**, users can quickly deploy, configure, and manage the visualization environment.
 
 For further details, refer to the provided scripts and notebooks.
 
