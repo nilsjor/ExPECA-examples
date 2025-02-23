@@ -53,7 +53,7 @@ def create_mqtt_datasource():
             "clientId": MQTT_CLIENT_ID,
             "topic": MQTT_TOPIC,
             "qos": MQTT_QOS,
-            "username": "default"         # Visible username.
+            "username": config["mqtt_user"]         # Visible username.
         },
         "secureJsonData": {
             "password": config["mqtt_psw"] # The MQTT connection password stored securely.
