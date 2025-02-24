@@ -148,7 +148,7 @@ Grafana dashboards ready to show off your latest experimentation.
 
 ## Conclusion
 
-This project provides a **Docker-based monitoring solution** for ExPECA. By leveraging **Python scripts and Python notebooks**, users can quickly deploy, configure, and manage the visualization environment.
+This project provides a **Docker-based monitoring solution** for ExPECA. By leveraging **Python notebooks and Python scripts**, users can quickly deploy, configure, and manage the visualization environment.
 
 For further details, refer to the provided scripts and notebooks.
 
