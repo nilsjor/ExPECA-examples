@@ -139,7 +139,7 @@ file in the same directory as the Python scripts.
 
 The typical procedure for a quick, secure, and repeatable setup of the visualization system is as follows:
 
-1. Run `visual_public.ipynb` or `visual_public.ipynb` with the desired parameters
+1. Run `visual_public.ipynb` or `visual_public_edge.ipynb` with the desired parameters
 2. Make sure that the appropriate parameter values are set in the `config_data.json` file
 3. Run `visual_config.py` script, which in turn runs a configured sequence of setup scripts
 
