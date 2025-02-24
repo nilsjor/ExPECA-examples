@@ -114,17 +114,17 @@ file in the same directory as the Python scripts.
 
 ```json
 {
-    "address": "x.x.x.x",
-    "grafana_psw": "defaultdefault",
-    "influxdb_psw": "defaultdefault",
-    "influxdb_org": "default",
-    "influxdb_bucket": "default",
-    "influxdb_retention_days": 14,
-    "influxdb_token": "default",
-    "influxdb_datasource": "influxdb",
-    "mqtt_user": "admin"
-    "mqtt_psw": "defaultdefault"
-    "mqtt_datasource": "mqtt"
+    "address"                 : "x.x.x.x",
+    "grafana_psw"             : "defaultdefault",
+    "influxdb_psw"            : "defaultdefault",
+    "influxdb_org"            : "default",
+    "influxdb_bucket"         : "default",
+    "influxdb_retention_days" : 14,
+    "influxdb_token"          : "default",
+    "influxdb_datasource"     : "influxdb",
+    "mqtt_user"               : "admin",
+    "mqtt_psw"                : "defaultdefault",
+    "mqtt_datasource"         : "mqtt"
 }
 ```
 
