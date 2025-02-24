@@ -85,8 +85,8 @@ For ease of setup, a set of **automation scripts** is provided. These scripts:
 | `grafana_init.py`                | Configures the Grafana admin password                                                    |
 | `grafana_influxdb_datasource.py` | Creates a Grafana data source for InfluxDB                                               |
 | `grafana_mqtt_datasource.py`     | Creates a Grafana data source for the MQTT broker                                        |
-| `grafana_backup.py`              | Backs up existing Grafana dashboards to `dashboards.json`                                |
-| `grafana_restore.py`             | Restores Grafana dashboards from `dashboards.json`                                       |
+| `grafana_backup.py`              | Backs up existing Grafana datasources/dashboardsto `datasources.json/dashboards.json`    |
+| `grafana_restore.py`             | Restores Grafana dashboards from `datasources.json/dashboards.json`                      |
 | `visual_config.py`               | Runs a sequence of selected scripts for quick setup                                      |
 
 #### Example Automation Sequence
