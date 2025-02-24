@@ -139,8 +139,9 @@ file in the same directory as the Python scripts.
 
 The typical procedure for a quick, secure, and repeatable setup of the visualization system is as follows:
 
-1. Run "visual_public.ipynb" or "visual_public.ipynb" with the desired parameters
-2. Run "visual_config.py" script, which in turn runs a configured sequence of setup scripts
+1. Run `visual_public.ipynb` or `visual_public.ipynb` with the desired parameters
+2. Make sure that the appropriate parameter values are set in the `config_data.json` file
+3. Run `visual_config.py` script, which in turn runs a configured sequence of setup scripts
 
 Voila! Your visualization system is up and running, all within a few minutes. You now have your own secure credentials and your favorite
 Grafana dashboards ready to show off your latest experimentation.
