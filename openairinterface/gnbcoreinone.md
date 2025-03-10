@@ -197,6 +197,24 @@ vim ~/openairinterface5g/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.
 
 3) Run gnb
 ```
+cd ~/openairinterface5g/cmake_targets/ran_build/build
 ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --sa --usrp-tx-thread-config 1 -E
+```
+
+
+# How to Debug 5G Core
+
+In order to debug the sctp messages between the core and gnb, while running the core, use tcpdump:
+```
+tcpdump -i any sctp -w rec.pcap
+```
+
+Read the produced pcap file via
+```
+tshark -r rec.pcap -Y ngap
+```
+Or to see the contents of the messages
+```
+tshark -r rec.pcap -Y ngap -V
 ```
 
